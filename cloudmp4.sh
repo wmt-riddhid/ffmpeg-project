@@ -11,7 +11,7 @@ Downloads | *.mov )
 ffmpeg -i $inputmov -vcodec h264 -acodec mp2 $outputmp4
 ;;
 *)
-echo "Sorry! This is not a mov file"
+echo "Sorry! This is not a mov file. Plesae enter mov file...Thank You!!"
 ;;
 esac
 
