@@ -2,4 +2,16 @@
 
 # This is a script for ffmpeg for convert mov file mp4 file
 
-ffmpeg -i Cloud Formation Video.mov -vcodec MPEG-4 -acodec mp2 cloud.mp4
+echo "enter the inputmov"
+read inputmov
+echo "enter the outputmp4"
+read outputmp4
+case "$inputmov" in
+Downloads | *.mov )
+ffmpeg -i $inputmov -vcodec h264 -acodec mp2 $outputmp4
+;;
+*)
+echo "Sorry! This is not a mov file"
+;;
+esac
+
